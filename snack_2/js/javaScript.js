@@ -33,8 +33,8 @@ const cars = [
         alimentazione : 'elettrico'
     },
     {
-        marca : 'fiat',
-        modello : '500',
+        marca : 'giardo',
+        modello : 'pedalata',
         alimentazione : 'benzina'
     },
     {
@@ -71,15 +71,14 @@ const disel = [];
 const other = []; 
 
 for(let i = 0; i < cars.length; i++){
-    for(key in cars[i]){
-        if(cars[i].alimentazione == 'benzina'){
-            benzina.push(cars[i])
-        }else if(cars[i].alimentazione == 'disel'){
-            disel.push(cars[i])
+        if(cars[i].alimentazione === 'benzina'){
+            benzina.push(cars[i]);
+        }else if(cars[i].alimentazione === 'disel'){
+            disel.push(cars[i]);
         }else{
-            other.push(cars[i])
+            other.push(cars[i]);
         }
-    }
+    
 }
 
 console.log(benzina);
